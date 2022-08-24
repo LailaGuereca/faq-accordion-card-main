@@ -1,0 +1,64 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/*Weights: 400, 700*/
+
+/*Variables*/
+:root {
+    --primary-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --primary-soft-red: hsl(14, 88%, 65%);
+    --background-gradient-soft-violet: hsl(273, 75%, 66%);
+    --background-gradient-soft-blue: hsl(240, 73%, 65%);
+    --neutral-text-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --neutral-text-dark-grayish-blue: hsl(240, 6%, 50%);
+    --neutral-dividers-light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient( var(--background-gradient-soft-violet), var(--background-gradient-soft-blue));
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*FAQ Card*/
+.card {
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*Footer*/
+footer {
+    position: absolute;
+    bottom: 0;
+}
