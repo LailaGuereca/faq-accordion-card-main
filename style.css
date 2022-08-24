@@ -15,50 +15,85 @@
 }
 
 /*General*/
-* {
-    margin: 0;
-    padding: 0;
+html {
     box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
-    font-size: 12px;
-    font-family: 'Kumbh Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    background: linear-gradient( var(--background-gradient-soft-violet), var(--background-gradient-soft-blue));
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(var(--background-gradient-soft-violet), var(--background-gradient-soft-blue));
+    padding: 3rem;
 }
 
-.hidden {
-    display: none;
-}
-
-ul {
-    list-style: none;
-}
-
-ul li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 /*FAQ Card*/
 .card {
     background: #FFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    border-radius: 2rem;
+    max-width: 56rem;
+    background-image: url('images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center 0%;
+    background-size: 50%;
 }
 
+.card-box {
+    display: none;
+}
 
+.card-img img{
+    width: 100%;
+    height: auto;
+    max-width: 15rem;
+    margin: auto;
+    display: block;
+}
 
-/*Footer*/
-footer {
-    position: absolute;
-    bottom: 0;
+.accordion-collapse {
+    
+}
+
+/*Media*/
+@media (min-width: 56em) {
+    .card {
+        position: relative;
+        display: flex;
+        margin: 6rem auto;
+        padding-right: 2rem;
+        background-image: url('images/bg-pattern-desktop.svg');
+        background-size: 45%;
+        background-position: -13% center;
+    }
+
+    .card-img, 
+    .card-text {
+        flex: 1;
+    }
+
+    .card-img {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .card-img img {
+        transform: translateX(-4rem);
+    }
+
+    .card-box {
+        display: block;
+        position: absolute;
+        top: 57%;
+        left: 0;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 1;
+    }
 }
